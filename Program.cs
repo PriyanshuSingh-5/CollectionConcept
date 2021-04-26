@@ -62,14 +62,36 @@ namespace Collections
 
             foreach (var item in myStack)
             Console.Write(item + ","); //prints 4,3,2,1, 
+
+            myStack.Pop();
             Console.WriteLine();
+            foreach (var item in myStack)
+                Console.Write(item + ","); //prints 4,3,2,1,
+            Console.WriteLine("top most element");
+            myStack.Peek();
             Console.WriteLine("Number of elements present in stack" + myStack.Count);
 
             myStack.Clear();
 
             Console.WriteLine("Number of elements present in stack after calling clear method" + myStack.Count);
         }
+       public static void QueueDemo()
+        {
+            Queue<int> callerIds = new Queue<int>();
+            callerIds.Enqueue(1);
+            callerIds.Enqueue(2);
+            callerIds.Enqueue(3);
+            callerIds.Enqueue(4);
 
+            foreach (var id in callerIds)
+            Console.Write(id); //prints 1234
+
+            Console.WriteLine("\t" + callerIds.Dequeue());
+            Console.WriteLine();
+            foreach (var id in callerIds)
+                Console.Write(id); //prints 1234
+            Console.WriteLine("\n" + callerIds.Peek());
+        }
 
     }
 
