@@ -10,8 +10,9 @@ namespace Collections
     {
         static void Main(string[] args)
         {
-
-         StackDemo();
+         HashSetDemo();
+         //QueueDemo
+         //StackDemo();
         //ListDemo();
         Console.ReadLine();
         }
@@ -91,6 +92,30 @@ namespace Collections
             foreach (var id in callerIds)
                 Console.Write(id); //prints 1234
             Console.WriteLine("\n" + callerIds.Peek());
+        }
+        public static void HashSetDemo()
+        {
+            //Creating hashset
+            //using hashset class
+            HashSet<string> myhash1 = new HashSet<string>();
+
+            //Add the elements in Hashset
+            //using Add method
+            myhash1.Add("C");
+            myhash1.Add("C++");
+            myhash1.Add("C#");
+            myhash1.Add("Java");
+            myhash1.Add("Ruby");
+            myhash1.Add("Ruby");
+
+            Console.WriteLine("Elements of myhash1:");
+
+            //Accessing elements of HashSet
+            //Using foreach Loop
+            foreach(var val in myhash1)
+            {
+                Console.WriteLine(val);
+            }
         }
 
     }
