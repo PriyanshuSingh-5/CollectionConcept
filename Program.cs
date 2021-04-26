@@ -10,9 +10,9 @@ namespace Collections
     {
         static void Main(string[] args)
         {
-            
-        
-        ListDemo();
+
+         StackDemo();
+        //ListDemo();
         Console.ReadLine();
         }
     public static void ListDemo()
@@ -52,6 +52,28 @@ namespace Collections
             Console.WriteLine(number + "\t");
         }
     }
+       public static void StackDemo()
+        {
+            Stack<int> myStack = new Stack<int>();
+            myStack.Push(1);
+            myStack.Push(2);
+            myStack.Push(3);
+            myStack.Push(4);
+
+            foreach (var item in myStack)
+            Console.Write(item + ","); //prints 4,3,2,1, 
+            Console.WriteLine();
+            Console.WriteLine("Number of elements present in stack" + myStack.Count);
+
+            myStack.Clear();
+
+            Console.WriteLine("Number of elements present in stack after calling clear method" + myStack.Count);
+        }
+
+
+    }
+
+    
 }
-}
+
      
